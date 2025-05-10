@@ -1,9 +1,10 @@
 fun main() {
-    print("Please enter your name: ")
-    val name = readln()
+    print("Enter a number: ")
+    val number = readln().toInt()
 
-    print("Please enter your age: ")
-    val age = readln().toInt()
-
-    println("\nHello $name, you are $age years old!")
+    if (number % 2 == 0) {
+        println("$number is an even number.")
+    } else {
+        println("$number is an odd number.")
+    }
 }
