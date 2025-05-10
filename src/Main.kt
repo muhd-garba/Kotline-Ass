@@ -1,21 +1,16 @@
 fun main() {
-    // Create a map of students and their scores
-    val studentScores = mapOf(
-        "Muhammad" to 85,
-        "Aisha" to 72,
-        "Fatima" to 68,
-        "Garba" to 90,
-        "Ahmed" to 65,
-        "Ali" to 75
-    )
+    // Lambda expression that takes two Ints and returns their product
+    val multiply: (Int, Int) -> Int = { a, b -> a * b }
 
-    println("Students who scored above 70:")
-    println("----------------------------")
+    // Using the lambda
+    val result1 = multiply(5, 7)
+    val result2 = multiply(10, 3)
+    val result3 = multiply(-4, 6)
 
-    // Filter and print students with scores > 70
-    studentScores.forEach { (name, score) ->
-        if (score > 70) {
-            println("$name: $score")
-        }
-    }
+    println("5 * 7 = $result1")
+    println("10 * 3 = $result2")
+    println("-4 * 6 = $result3")
+
+    // You can also call it directly in println
+    println("\n8 * 9 = ${multiply(8, 9)}")
 }
