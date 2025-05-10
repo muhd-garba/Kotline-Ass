@@ -1,23 +1,30 @@
-class Car(val brand: String, val model: String, val year: Int) {
-    fun displayDetails() {
-        println("Car Details:")
-        println("Brand: $brand")
-        println("Model: $model")
-        println("Year: $year")
+// Base class
+open class Person(val name: String, val age: Int) {
+    open fun printDetails() {
+        println("Person Details:")
+        println("Name: $name")
+        println("Age: $age")
+    }
+}
+
+// Subclass
+class Student(name: String, age: Int, val grade: String) : Person(name, age) {
+    override fun printDetails() {
+        super.printDetails()  // Call base class method
+        println("Grade: $grade")
         println()  // Add empty line for separation
     }
 }
 
 fun main() {
-    // Create two Car objects
-    val car1 = Car("Toyota", "Camry", 2022)
-    val car2 = Car("Tesla", "Model S", 2023)
+    // Create Person and Student objects
+    val person = Person("Muhammad Garba", 30)
+    val student1 = Student("Alice Johnson", 18, "A")
+    val student2 = Student("Bob Smith", 19, "B+")
 
-    // Display their details
-    car1.displayDetails()
-    car2.displayDetails()
-
-    // You can create more cars and display them
-    val car3 = Car("Ford", "Mustang", 1969)
-    car3.displayDetails()
+    // Print their details
+    person.printDetails()
+    println("--------------------")
+    student1.printDetails()
+    student2.printDetails()
 }
