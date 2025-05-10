@@ -1,17 +1,19 @@
+fun sum(a: Int, b: Int): Int {
+    return a + b
+}
+
 fun main() {
-    // Print numbers 1 to 10
-    println("Numbers from 1 to 10:")
-    for (i in 1..10) {
-        print("$i ")
-    }
+    // Test cases
+    val result1 = sum(5, 3)
+    val result2 = sum(-2, 7)
+    val result3 = sum(0, 0)
+    val result4 = sum(100, 250)
 
-    println("\n") // Add some space between outputs
+    println("5 + 3 = $result1")
+    println("-2 + 7 = $result2")
+    println("0 + 0 = $result3")
+    println("100 + 250 = $result4")
 
-    // Print even numbers from 1 to 20
-    println("Even numbers from 1 to 20:")
-    for (i in 1..20) {
-        if (i % 2 == 0) {
-            print("$i ")
-        }
-    }
+    // You can also call it directly in println
+    println("\n15 + 25 = ${sum(15, 25)}")
 }
